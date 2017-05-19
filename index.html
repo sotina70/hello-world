@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html data-html-name="index">
+
+<head>
+    <meta charset="utf-8" />
+    <link id="maincss" rel="stylesheet" type="text/css" href="css/main-style.css">
+    <link href="css/header.css" rel="stylesheet" type="text/css" />
+    <link href="css/footer.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/index-style.css">
+    <link rel="stylesheet" type="text/css" href="css/ad.css">
+    <link rel="stylesheet" type="text/css" href="css/layout/layout.css">
+    <title>index</title>
+</head>
+
+<body>
+    <!--公告板-->
+    <div id="notice" class="notice_box" style="display:none;">
+        <div class="notice_box_deformation">
+            <div class="notice_top_bottom_1" id="board">
+                <!-- 公告板 -->
+            </div>
+            <div class="notice_line_top"></div>
+            <div class="notice_content_1">
+                <p class="notice_content" style="line-height:1.3;">
+                    <!-- 公告板内容 -->
+                </p>
+            </div>
+            <div class="index_box">
+                <div class="main_left">
+                    <div class="left"></div>
+                    <div class="right"></div>
+                    <span id="notice_switch">切换：第</span>
+                    <span id="cursorIndex"></span>
+                    <span id="notice_total">条/共</span>
+                    <span id="allItemsLength"></span>
+                    <span id="notice_item">条</span>
+                </div>
+                <div class="main_button">
+                    <span id="button" class="index_button">确定</span>
+                </div>
+                <div class="main_right">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                    <span id="notice_turn_page">翻页：第</span>
+                    <span id="curPage"></span>
+                    <span id="notice_page_total">页/共</span>
+                    <span id="allPageNum"></span>
+                    <span id="notice_page">页</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="exitBox" style="display:none;">
+        <div class="bg"></div>
+        <div class="show border-box color-box rh_color_1 pop-up">
+            <div class="box_top pop-up-title" id="systemInfo">
+                <!-- 系统提示 -->
+            </div>
+            <div class="box_body">
+                <div class="p_font" id="isExit">
+                    <!-- 是否进入直播？ -->
+                </div>
+                <div role="outline-button" class="isexit sub sub_hover btn_active" id="exitYes">
+                    <!-- 是 -->
+                </div>
+                <div role="outline-button" class="isexit sub" id="exitNo">
+                    <!-- 否 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-box">
+        <!-- 顶部菜单 -->
+        <div id="topMenu" class="thl_top_menu hd">
+            <ul class="thl_top_menu_ul">
+                <li class="thl_top_menu_item nav-title" id="myHotel">
+                    <!-- 电视节目 -->
+                </li>
+                <li class="thl_top_menu_item nav-title" id="hotelServer">
+                    <!-- 服务指南 -->
+                </li>
+                <li class="thl_top_menu_item nav-title" id="roomEntertainment">
+                    <!-- 客房点播 -->
+                </li>
+                <li class="thl_top_menu_item nav-title" id="TrlHelp">
+                    <!-- 旅行助手 -->
+                </li>
+                <li class="thl_top_menu_item nav-title" id="setMore">
+                    <!-- 更多设置 -->
+                </li>
+            </ul>
+        </div>
+        <div class="banner bd thl_banner_content_box">
+            <!-- TV zone -->
+            <ul id="tvzone" class="" style="padding-bottom: 40px;">
+                <!--     <li id="li_0">
+                    <ul class="layout layout-five-holiday">
+                        <li class="thl_banner_li_bottom color-box" style="width: 685px;">
+                            <div class="layout_mask">
+                            </div>
+                            <div class="Abanner Abanner_1">
+                            </div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="tvLive">
+                            <div id="li_0_1_0" class="layout_mask"></div>
+                            <div id="li_0_1_1" class="thl_banner_li_img"></div>
+                            <div id="li_0_1_2" class="thl_banner_li_text">电视直播</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="room">
+                            <div id="li_0_1_0" class="layout_mask "></div>
+                            <div id="li_0_1_1" class="thl_banner_li_img"></div>
+                            <div id="li_0_1_2" class="thl_banner_li_text">我的消息</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="myBill">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">我的账单</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="group">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">团客信息</div>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <!-- 酒店服务 -->
+            <ul id="hotelMy">
+                <!--  <li id="li_2">
+                    <ul class="layout layout-eight">
+                        <li class="thl_banner_li color-box" id="bookResturant">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">餐饮服务</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_border color-box" id="hotelCon">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">酒店介绍</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_border color-box" id="roomBuy">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">宾客服务</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="meet">
+                            <div class="layout_mask color-box"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">送餐服务</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_border thl_banner_li_bottom color-box" id="spa">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">仁和业态</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="intelRoom">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">交通</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="szyx">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">睡枕优选</div>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <!-- 客房娱乐 -->
+            <ul id="entertainment">
+                <!--  <li id="li_2">
+                    <ul class="layout layout-eight">
+                        <li class="thl_banner_li color-box" id="bookResturant">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">餐饮服务</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="hotelCon">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">酒店介绍</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="roomBuy">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">宾客服务</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="meet">
+                            <div class="layout_mask color-box"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">送餐服务</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="spa">
+                            <div class="layout_mask_base_2">
+                                <div class="layout_mask  color-box_1 layout_mask_an_2"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an_2"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an_2">仁和业态</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="intelRoom">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">交通</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="szyx">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">睡枕优选</div>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <!-- 旅行助手 -->
+            <ul id="assistant">
+                <!-- <li id="li_3">
+                    <ul class="layout layout-eight-2">
+                         <li class="thl_banner_li thl_banner_li_bottom color-box" id="weatherForecast">
+                            <div class="layout_mask_base">
+                                <div class="layout_mask color-box_1 layout_mask_an"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an">天气预报</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="worldTime">
+                            <div class="layout_mask_base">
+                                <div class="layout_mask color-box_1 layout_mask_an"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an">世界时间</div>
+                        </li>
+                           <li class="thl_banner_li thl_banner_li_bottom color-box" id="aroundInfo">
+                            <div class="layout_mask_base">
+                                <div class="layout_mask color-box_1 layout_mask_an"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an">周边商圈</div>
+                        </li>
+                          <li class="thl_banner_li thl_banner_li_bottom color-box" id="triceInfo">
+                            <div class="layout_mask_base">
+                                <div class="layout_mask color-box_1 layout_mask_an"></div>
+                            </div>
+                            <div class="thl_banner_li_img thl_banner_li_img_an"></div>
+                            <div class="thl_banner_li_text thl_banner_li_text_an">高铁预订</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="trlSince">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">旅游景点</div>
+                        </li>
+                        <li class="thl_banner_li thl_banner_li_bottom color-box" id="browCar">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">租车预订</div>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+            <!-- 更多设置 -->
+            <ul id="setting">
+                <!-- <li id="li_4">
+                    <ul class="layout-ten">
+                        <li class="thl_banner_li color-box" id="luangageChoice">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">语言选择</div>
+                            <div class="htl_add_language" id="add_language"></div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="fixPIN">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">pin修改</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="bkmusic">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">背景乐设置</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="announcement">
+                            <div id="li_0_1_0" class="layout_mask"></div>
+                            <div id="li_0_1_1" class="thl_banner_li_img"></div>
+                            <div id="li_0_1_2" class="thl_banner_li_text">酒店公告</div>
+                        </li>
+                        <li class="thl_banner_li color-box" id="album">
+                            <div class="layout_mask"></div>
+                            <div class="thl_banner_li_img"></div>
+                            <div class="thl_banner_li_text">酒店相册</div>
+                        </li>
+                        <li class="thl_banner_li">
+                            <div class="layout_mask"></div>
+                            <img src="img/icon/tvbozone.png" width="216" height="216" style="position:relative;" />
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/common/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="js/plugin/unslider.min.js"></script>
+<script type="text/javascript" src="js/common/tools.js"></script>
+<script type="text/javascript">
+tools.createCommenScriptTag("");
+tools.createScriptTag("js/common/column-name.js");
+tools.createScriptTag("js/plugin/unslider.min.js");
+tools.createScriptTag("js/plugin/jquery.SuperSlide.js");
+tools.createScriptTag("js/index-data.js");
+tools.createScriptTag("js/index-html.js");
+</script>
+<script src="./js/common/footer.js"></script>
+<script src="./js/common/header.js"></script>
+
+</html>
